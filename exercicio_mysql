@@ -3,8 +3,9 @@ Select profissao, count(*) from gafanhotos
 Group by profissao;
 
 Exercicio  02
-Where nascimento > ‘2015-01-01’
-Group by sexo;
+select sexo, count(*) from gafanhotos
+where nascimento > '2005-01-01'
+group by sexo;
 
 Exercicio 03
 Select nacionalidade, count(*) from gafanhotos
