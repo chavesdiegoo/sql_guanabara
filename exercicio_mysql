@@ -1,5 +1,5 @@
 Exercicio 01
-Select profissao, count(*) from gafanhotos
+select profissao, count(*) from gafanhotos
 Group by profissao;
 
 Exercicio  02
@@ -8,13 +8,14 @@ where nascimento > '2005-01-01'
 group by sexo;
 
 Exercicio 03
-Select nacionalidade, count(*) from gafanhotos
-Where nacionalidade != ‘Brasil’
-Group by nacionalidade
-Having count(*) > 3;
+select nacionalidade, count(*) from gafanhotos
+where nacionalidade != 'Brasil'
+group by nacionalidade
+having count(nacionalidade) > 3;
 
 Exercicio 04
 Select altura, count(*) from gafanhotos
-Where peso > ‘100’
-Group by altura
-Having altura > (select avg(altura) from gafanhotos);
+Where peso > '100'
+group by altura
+having altura > (select avg(altura) from gafanhotos)
+order by peso desc;
